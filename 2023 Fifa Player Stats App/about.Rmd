@@ -1,0 +1,50 @@
+## Author
+- **Name**: Ashley Cervantes
+- **Email**: akc9@illinois.edu
+
+## Purpose
+
+The purpose of this application is to allow users to explore FIFA23 player statistics interactively. Users can filter players based on Club, Nationality, and Player Names to view specific player details. These include physical stats like Height and Weight, player positions, jersey numbers, and overall ratings.
+
+The application provides:
+
+-Player Profiles: Displays player-specific photos, national flags, club logos, and detailed stats.
+
+-Filtered Table: Allows broader exploration of FIFA data with dynamic filters.
+
+-User-Friendly Interface: Designed for ease of navigation and a clean, interactive experience.
+
+## Data
+
+The data set used in this application is derived from 2023 FIFA Official Data, which includes detailed statistics on players’ attributes, positions, and clubs. This data set was obtained from a publicly available source and cleaned for usability.
+
+Key Data Features:
+
+-Name: Player's full name
+
+-Age: Player's age
+
+-Height & Weight: Physical stats converted to feet/inches and pounds
+
+-Position: Detailed player positions (e.g., Striker, Goalkeeper)
+
+-Club: Current club affiliation
+
+-Jersey Number: Player’s jersey number
+
+-Overall Rating: The player's overall performance score out of 100, with higher scores (closer to 100) indicating better performance and skill
+
+
+Data Source: The data was obtained from the 2023 FIFA Player Stats Database, available on Kaggle.
+
+## References
+
+- 2023 FIFA Official Data: Kaggle Dataset - FIFA Player Stats Database
+
+- Source: Kaggle contributor Bryan B.
+
+- File Used: FIFA23_official_data.csv
+
+- [Inspiration](https://fightingillini.com/sports/mens-basketball/roster?view=3)
+
+

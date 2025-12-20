@@ -1,0 +1,36 @@
+expand_positions = function(data) {
+  data %>%
+    mutate(Position = case_when(
+      Position == "SUB" ~ "Substitute",
+      Position == "LCM" ~ "Left Center Midfielder",
+      Position == "LB" ~ "Left Back",
+      Position == "RCM" ~ "Right Center Midfielder",
+      Position == "RDM" ~ "Right Defensive Midfielder",
+      Position == "LCB" ~ "Left Center Back",
+      Position == "RS" ~ "Right Striker",
+      Position == "RB" ~ "Right Back",
+      Position == "LM" ~ "Left Midfielder",
+      Position == "LS" ~ "Left Striker",
+      Position == "RWB" ~ "Right Wing Back",
+      Position == "CDM" ~ "Central Defensive Midfielder",
+      Position == "RW" ~ "Right Winger",
+      Position == "RM" ~ "Right Midfielder",
+      Position == "LF" ~ "Left Forward",
+      Position == "LWB" ~ "Left Wing Back",
+      Position == "ST" ~ "Striker",
+      Position == "CAM" ~ "Central Attacking Midfielder",
+      Position == "LDM" ~ "Left Defensive Midfielder",
+      Position == "RES" ~ "Reserve",
+      Position == "LW" ~ "Left Winger",
+      Position == "CF" ~ "Center Forward",
+      Position == "RF" ~ "Right Forward",
+      Position == "RCB" ~ "Right Center Back",
+      Position == "CM" ~ "Central Midfielder",
+      Position == "CB" ~ "Center Back",
+      Position == "GK" ~ "Goalkeeper",
+      Position == "RAM" ~ "Right Attacking Midfielder",
+      Position == "LAM" ~ "Left Attacking Midfielder",
+      Position == "nan" ~ "Not Available",
+      TRUE ~ Position
+    ))
+}
