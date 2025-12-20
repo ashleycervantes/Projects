@@ -1,0 +1,33 @@
+name: Push to Dune on Commit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'USDC-Dashboard/queries/**'  # Only triggers if files in this subfolder change
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: USDC-Dashboard  # This tells GitHub to run all commands inside your folder
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Log directory structure
+        run: ls -R
+    
+      - name: pip requirements
+        run: pip install -r requirements.txt
+
+      - name: Update all queries from Dune
+        env:
+          DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
+        run: python -u scripts/push_to_dune.py
